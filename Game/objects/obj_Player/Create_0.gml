@@ -1,19 +1,23 @@
 
-horizontal = 0;
-vertical = 0;
-grav = 0.2;
-spd = 6;
-jump = -11.5;
+// In pixels per frame:
+movementSpeed = 6;
 
-minJumpHeight = 20;
-maxJumpHeight = 100;
-timeToApex = 1;
+// In pixels:
+minJumpHeight = -50;
+maxJumpHeight = -300;
+
+// In frames:
+timeToApex = 40;
+timeToFallAfterApex = 30;
 
 jumpVelocity = 2 * maxJumpHeight / timeToApex;
 gravityOnJumpHeld = -jumpVelocity / timeToApex;
 gravityOnJumpRelease = jumpVelocity / minJumpHeight / 2 - jumpVelocity * jumpVelocity / minJumpHeight;
+gravityOnFalling = -jumpVelocity / timeToFallAfterApex;
 
-facing = 1;
+playerGravity = gravityOnJumpRelease;
+vertical = 0;
+
 basicCooldown = 0;
 special1Cooldown = 0;
 special2Cooldown = 0;
@@ -24,6 +28,7 @@ player = ++global.player;
 if (player == 1) {
 	ctrl = 1;
 	character = 2;
+	facing = 1;
 	key_left = ord("A");
 	key_right = ord("D");
 	key_jump = vk_space;
@@ -33,6 +38,7 @@ if (player == 1) {
 } else {
 	ctrl = 0;
 	character = 1;
+	facing = -1;
 	key_left = vk_left;
 	key_right = vk_right;
 	key_jump = vk_up;
