@@ -14,6 +14,7 @@ facing = 1;
 player = ++global.player;
 
 if (player == 1) {
+	ctrl = 1;
 	character = 2;
 	key_left = ord("A");
 	key_right = ord("D");
@@ -22,6 +23,7 @@ if (player == 1) {
 	key_special1 = ord("T");
 	key_special2 = ord("Y");
 } else {
+	ctrl = 0;
 	character = 1;
 	key_left = vk_left;
 	key_right = vk_right;
@@ -30,3 +32,7 @@ if (player == 1) {
 	key_special1 = ord("O");
 	key_special2 = ord("P");
 }
+ctrl_jump = gp_face1;
+ctrl_basic = gp_face2;
+ctrl_special1 = gp_face3;
+ctrl_special2 = gp_face4;

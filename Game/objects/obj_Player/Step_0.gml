@@ -1,16 +1,16 @@
 
 var input_left = keyboard_check(key_left);
 var input_right = keyboard_check(key_right);
-var input_jump_pressed = keyboard_check_pressed(key_jump);
-var input_basic_pressed = keyboard_check_pressed(key_basic);
-var input_special2_pressed = keyboard_check_pressed(key_special2);
+var input_jump_pressed = global.controllers[ctrl] ? gamepad_button_check_pressed(ctrl, ctrl_jump) : keyboard_check_pressed(key_jump);
+var input_basic_pressed = global.controllers[ctrl] ? gamepad_button_check_pressed(ctrl, ctrl_basic) : keyboard_check_pressed(key_basic);
+var input_special2_pressed = global.controllers[ctrl] ? gamepad_button_check_pressed(ctrl, ctrl_special2) : keyboard_check_pressed(key_special2);
 
 var input_special1_pressed, input_special1, input_special1_released;
 if (character == 2) {
-	input_special1 = keyboard_check(key_special1);
-	input_special1_released = keyboard_check_released(key_special1);
+	input_special1 = global.controllers[ctrl] ? gamepad_button_check(ctrl, ctrl_special1) : keyboard_check(key_special1);
+	input_special1_released = global.controllers[ctrl] ? gamepad_button_check_released(ctrl, ctrl_special1) : keyboard_check_released(key_special1);
 } else {
-	input_special1_pressed = keyboard_check_pressed(key_special1);
+	input_special1_pressed = global.controllers[ctrl] ? gamepad_button_check_pressed(ctrl, ctrl_special1) : keyboard_check_pressed(key_special1);
 }
 
 var move = input_right - input_left;
