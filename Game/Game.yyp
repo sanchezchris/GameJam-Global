@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "41fdbea7-dad4-4210-b826-0a036654105b",
+            "Value": {
+                "id": "2c7af0b1-4e5f-49bd-b6d2-a867607dc45d",
+                "resourcePath": "sprites\\spr_UIBox\\spr_UIBox.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4e198b11-f66d-4771-a607-7f8b48f2d95c",
             "Value": {
                 "id": "013c2017-da35-4e94-9de3-776c59d03bd9",
@@ -212,6 +220,14 @@
                 "id": "c2d1b453-d49c-4d12-855e-edfed23beb3e",
                 "resourcePath": "objects\\obj_Cleetus1\\obj_Cleetus1.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "8f0850d3-13ca-4f7c-b44c-1607b13da5dd",
+            "Value": {
+                "id": "584f7c4e-afd5-458a-837b-4f50087c02a8",
+                "resourcePath": "scripts\\DrawUIBox\\DrawUIBox.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -400,7 +416,7 @@
         }
     ],
     "script_order": [
-        
+        "8f0850d3-13ca-4f7c-b44c-1607b13da5dd"
     ],
     "tutorial": ""
 }
