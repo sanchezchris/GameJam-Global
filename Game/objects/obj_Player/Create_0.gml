@@ -3,9 +3,9 @@ horizontal = 0;
 vertical = 0;
 grav = 0.2;
 spd = 6;
-jump = -8;
+jump = -10;
 
-character = 4;
+character = 1;
 
 BasicCooldown = 0;
 Attack1 = 0;

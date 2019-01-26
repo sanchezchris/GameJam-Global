@@ -11,7 +11,7 @@ vertical = vertical + grav;
 // Horizonal movement
 if(place_meeting(x + horizontal, y, obj_Wall)){
 	
-	while(!place_meeting(x + sign(horizontal), y, obj_Wall)){
+	if(!place_meeting(x + sign(horizontal), y, obj_Wall)){
 		
 		if(character == 2){
 			if(!key_T){
@@ -21,8 +21,8 @@ if(place_meeting(x + horizontal, y, obj_Wall)){
 		else{
 			x = x + sign(horizontal);
 		}
-	horizontal = 0;
 	}
+	horizontal = 0;
 }
 if(character == 2){
 	if(!key_T){
@@ -39,7 +39,7 @@ else{
 // Vertical movement
 if(place_meeting(x, y + vertical, obj_Wall)){
 	
-	while(!place_meeting(x, y + sign(vertical), obj_Wall)){
+	if(!place_meeting(x, y + sign(vertical), obj_Wall)){
 		
 		y = y + sign(vertical);
 	}
