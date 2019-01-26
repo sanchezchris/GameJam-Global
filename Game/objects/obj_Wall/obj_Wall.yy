@@ -1,8 +1,8 @@
 {
-    "id": "ef4e42c7-b5b5-4c27-8ede-fb37143fc53c",
+    "id": "521974f1-14d2-4a7c-a0f6-2360dede3f8d",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "obj_Floor",
+    "name": "obj_Wall",
     "eventList": [
         
     ],
