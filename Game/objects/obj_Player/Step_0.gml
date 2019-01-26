@@ -35,6 +35,15 @@ if((place_meeting(x, y+1, obj_Wall)) && key_space){
 	vertical = -5;
 }
 
+// Animation
+
+if(horizontal != 0){
+	sprite_index = spr_PlayerRun;
+}
+else{
+	sprite_index = spr_Player;
+}
+
 
 
 
