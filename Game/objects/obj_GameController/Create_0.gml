@@ -1,1 +1,2 @@
-global.player = 0
+global.player = 0;
+global.controllers = [];

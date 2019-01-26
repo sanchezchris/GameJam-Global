@@ -1,7 +1,7 @@
 
 // This script is called when any character presses their special2 input
 
-if (Attack2 <= 0) {
+if (special2Cooldown <= 0) {
 	global.player = player;
 	global.facing = facing;
 	
@@ -24,6 +24,6 @@ if (Attack2 <= 0) {
 			_y = y - 20;
 			break;
 	}
-	Attack2 = 30;
+	special2Cooldown = 35;
 	instance_create_layer(x, _y, "instances", _object);
 }

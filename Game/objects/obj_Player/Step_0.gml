@@ -1,21 +1,22 @@
 
 var input_left = keyboard_check(key_left);
 var input_right = keyboard_check(key_right);
-var input_jump_pressed = keyboard_check_pressed(key_jump);
-var input_basic_pressed = keyboard_check_pressed(key_basic);
-var input_special2_pressed = keyboard_check_pressed(key_special2);
+var input_jump_pressed = global.controllers[ctrl] ? gamepad_button_check_pressed(ctrl, ctrl_jump) : keyboard_check_pressed(key_jump);
+var input_jump_released = keyboard_check_released(key_jump);
+var input_basic_pressed = global.controllers[ctrl] ? gamepad_button_check_pressed(ctrl, ctrl_basic) : keyboard_check_pressed(key_basic);
+var input_special2_pressed = global.controllers[ctrl] ? gamepad_button_check_pressed(ctrl, ctrl_special2) : keyboard_check_pressed(key_special2);
 
 var input_special1_pressed, input_special1, input_special1_released;
 if (character == 2) {
-	input_special1 = keyboard_check(key_special1);
-	input_special1_released = keyboard_check_released(key_special1);
+	input_special1 = global.controllers[ctrl] ? gamepad_button_check(ctrl, ctrl_special1) : keyboard_check(key_special1);
+	input_special1_released = global.controllers[ctrl] ? gamepad_button_check_released(ctrl, ctrl_special1) : keyboard_check_released(key_special1);
 } else {
-	input_special1_pressed = keyboard_check_pressed(key_special1);
+	input_special1_pressed = global.controllers[ctrl] ? gamepad_button_check_pressed(ctrl, ctrl_special1) : keyboard_check_pressed(key_special1);
 }
 
 var move = input_right - input_left;
-var horizontal = move * spd;
-vertical = vertical + grav;
+var horizontal = move * movementSpeed;
+vertical = vertical + playerGravity;
 
 // Horizonal movement
 if (character != 2 || !input_special1) {
@@ -29,24 +30,30 @@ if (character != 2 || !input_special1) {
 }
 
 // Vertical movement
-onGround = false;
 if (place_meeting(x, y + vertical, obj_Wall)) {
-	onGround = true;
 	while (!place_meeting(x, y + sign(vertical), obj_Wall)) {
 		y += sign(vertical);
-		onGround = false;
 	}
 	vertical = 0;
 }
 y += vertical;
 
-if ((place_meeting(x, y + 1, obj_Wall)) && input_jump_pressed) {
-	vertical = jump;
+onGround = place_meeting(x, y + 1, obj_Wall);
+
+if (onGround && input_jump_pressed) {
+	vertical = jumpVelocity;
+	onGround = false;
+	jumpReleased = false;
+	playerGravity = gravityOnJumpHeld;
+}
+if (input_jump_released && vertical < 0) {
+	playerGravity = gravityOnJumpRelease;
+} else if (vertical >= 0) {
+	playerGravity = gravityOnFalling;
 }
 
-
 // Animation
-if(character == 1){
+if (character == 1) {
 	if(attackAnimation){
 		sprite_index = spr_HeinrichBasic;
 	}
@@ -98,8 +105,8 @@ if (horizontal > 0) {
 }
 
 // Pirate ability
-if (character == 2 && input_special1 && Attack1 < 0) {
-	Attack1Damage++;
+if (character == 2 && input_special1 && special1Cooldown <= 0) {
+	special1Damage++;
 }
 
 // Attack inputs
@@ -117,10 +124,10 @@ else if (input_special2_pressed) {
 }
 
 
-if(BasicCooldown < 0){
+if (basicCooldown < 0) {
 	attackAnimation = false;
 }
 
-BasicCooldown--;
-Attack1--;
-Attack2--;
+basicCooldown--;
+special1Cooldown--;
+special2Cooldown--;
