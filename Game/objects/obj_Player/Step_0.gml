@@ -2,8 +2,7 @@
 input_left = keyboard_check(key_left);
 input_right = keyboard_check(key_right);
 input_jump = keyboard_check_pressed(key_jump);
-input_basic = keyboard_check(key_basic);
-input_special1 = keyboard_check(key_special1);
+
 
 var move = input_right - input_left;
 horizontal = move * spd;
@@ -67,16 +66,32 @@ else{
 
 
 
+
+
 // Facing direction
-if(horizontal > 0){
-	image_xscale = 1;
-	facing = 1
+if(player == 1){
+	if(horizontal > 0){
+		image_xscale = 1;
+		facing1 = 1;
+		}
+	if(horizontal < 0){
+		image_xscale = -1;
+		facing1 = -1;
+	}
+}
+else{
+	if(horizontal > 0){
+		image_xscale = 1;
+		facing2 = 1;
+	}
+	if(horizontal < 0){
+		image_xscale = -1;
+		facing2 = -1;
+	}
 }
 
-if(horizontal < 0){
-	image_xscale = -1;
-	facing = -1
-}
+
+
 
 
 

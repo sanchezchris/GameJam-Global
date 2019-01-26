@@ -1,4 +1,4 @@
-if(player == 1){
+if(player != 1){
 if(character == 1){
 	if(Attack2 < 0){
 		instance_create_layer(x, y - 10, "instances", obj_Heinrich2);
