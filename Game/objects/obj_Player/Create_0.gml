@@ -13,11 +13,11 @@ jumpVelocity = 2 * maxJumpHeight / timeToApex;
 gravityOnJumpHeld = -jumpVelocity / timeToApex;
 gravityOnJumpRelease = jumpVelocity / minJumpHeight / 2 - jumpVelocity * jumpVelocity / minJumpHeight;
 
-BasicCooldown = 0;
-Attack1 = 0;
-Attack2 = 0;
-Attack1Damage = 0;
 facing = 1;
+basicCooldown = 0;
+special1Cooldown = 0;
+special2Cooldown = 0;
+special1Damage = 0;
 
 player = ++global.player;
 
