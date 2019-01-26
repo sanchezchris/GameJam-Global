@@ -47,34 +47,45 @@ if ((place_meeting(x, y + 1, obj_Wall)) && input_jump_pressed) {
 
 // Animation
 if(character == 1){
-	if (horizontal != 0) {
+	if(attackAnimation){
+		sprite_index = spr_HeinrichBasic;
+	}
+	else if (horizontal != 0) {
 		sprite_index = spr_HeinrichRun;
 	}else {
 		sprite_index = spr_Heinrich;
 	}
 }
 else if(character == 2){
-	if (horizontal != 0) {
+	if(attackAnimation){
+		sprite_index = spr_AsierBeardBasic;
+	}
+	else if (horizontal != 0) {
 		sprite_index = spr_AsierBeardRun;
 	}else {
 		sprite_index = spr_AsierBeard;
 	}
 }
 else if(character == 3){
-	if (horizontal != 0) {
+	if(attackAnimation){
+		sprite_index = spr_DouglasBasic;
+	}
+	else if (horizontal != 0) {
 		sprite_index = spr_DouglasRun;
 	}else {
 		sprite_index = spr_Douglas;
 	}
 }
 else{
-	if (horizontal != 0) {
+	if(attackAnimation){
+		sprite_index = spr_CleetusBasic;
+	}
+	else if (horizontal != 0) {
 		sprite_index = spr_CleetusRun;
 	}else {
 		sprite_index = spr_Cleetus;
 	}
 }
-
 
 
 // Facing direction
@@ -94,12 +105,20 @@ if (character == 2 && input_special1 && Attack1 < 0) {
 // Attack inputs
 if (input_basic_pressed) {
 	BasicAttack();
+	attackAnimation = true;
 }
-if (character != 2 && input_special1_pressed || character == 2 && input_special1_released) {
+else if (character != 2 && input_special1_pressed || character == 2 && input_special1_released) {
 	SpecialOne();
+	attackAnimation = true;
 }
-if (input_special2_pressed) {
+else if (input_special2_pressed) {
 	SpecialTwo();
+	attackAnimation = true;
+}
+
+
+if(BasicCooldown < 0){
+	attackAnimation = false;
 }
 
 BasicCooldown--;

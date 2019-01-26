@@ -4,6 +4,8 @@ vertical = 0;
 grav = 0.2;
 spd = 6;
 jump = -11.5;
+attackAnimation = false;
+counter = 0;
 
 BasicCooldown = 0;
 Attack1 = 0;
