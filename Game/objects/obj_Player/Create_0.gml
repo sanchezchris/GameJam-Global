@@ -5,7 +5,7 @@ grav = 0.2;
 spd = 6;
 jump = -8;
 
-character = 3;
+character = 4;
 
 BasicCooldown = 0;
 Attack1 = 0;

@@ -18,3 +18,10 @@ if(character == 3){
 		Attack2 = 30;
 	}
 }
+
+if(character == 4){
+	if(Attack2 < 0){
+		instance_create_layer(x, y - 20, "instances", obj_Cleetus2);
+		Attack2 = 30;
+	}
+}

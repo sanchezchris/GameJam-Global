@@ -1,6 +1,6 @@
 existence--;
 
-x = x + (obj_Player.facing * spd);
+x = x + (facing * spd);
 
 if(existence <= 0){
 	instance_destroy();
