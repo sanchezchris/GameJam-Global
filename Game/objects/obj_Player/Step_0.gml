@@ -2,6 +2,7 @@
 input_left = keyboard_check(key_left);
 input_right = keyboard_check(key_right);
 input_jump = keyboard_check_pressed(key_jump);
+input_special1 = keyboard_check(ord("T"));
 
 
 var move = input_right - input_left;
@@ -83,12 +84,15 @@ if(horizontal < 0){
 
 // ability for pirate
 if(character == 2){
-	if(input_special1){
-		if(Attack1 < 0){
-		Attack1Damage++;
-		}
+		
+		if(input_special1){
+			global.player = 1;
+			global.facing = facing;
+			if(Attack1 < 0){
+			Attack1Damage++;
+			}		
 	}
-	if(keyboard_check_released(key_special1)){
+	if(keyboard_check_released((ord("T")))){
 		instance_create_layer(x + (facing * 45) , y + 5, "instances", obj_AeiserBeard1);
 		Attack1 = 25;
 	}

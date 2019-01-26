@@ -14,7 +14,7 @@ facing = 1;
 player = ++global.player;
 
 if (player == 1) {
-	character = 1;
+	character = 2;
 	key_left = ord("A");
 	key_right = ord("D");
 	key_jump = vk_space;
