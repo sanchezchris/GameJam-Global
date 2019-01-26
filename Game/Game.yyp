@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "17c1e174-98d1-4d20-a5d4-65556dffed17",
+            "Value": {
+                "id": "f58a0dc7-7739-4e2e-8b2e-20f9aec9ffbe",
+                "resourcePath": "scripts\\SpecialTwo\\SpecialTwo.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "26460208-854f-453d-8695-dac477b5037a",
             "Value": {
                 "id": "bb0e68e5-b5af-4784-8914-1cfd870371ce",
@@ -68,6 +76,14 @@
                 "id": "e89bd0ec-2957-4543-87ce-0c0ca343b6a2",
                 "resourcePath": "objects\\obj_AeiserBeard2\\obj_AeiserBeard2.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "30ff0bbf-240d-45e4-9726-20d1fb0743d3",
+            "Value": {
+                "id": "a68e6d38-9326-4d1c-b295-04385db39340",
+                "resourcePath": "scripts\\BasicAttack\\BasicAttack.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -413,10 +429,21 @@
                 "resourcePath": "objects\\obj_Douglas2\\obj_Douglas2.yy",
                 "resourceType": "GMObject"
             }
+        },
+        {
+            "Key": "ff2b09c8-b0c5-49aa-8c85-9d92234ce771",
+            "Value": {
+                "id": "231f49d5-ea65-49e7-a526-eccf9cca4479",
+                "resourcePath": "scripts\\SpecialOne\\SpecialOne.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [
-        "8f0850d3-13ca-4f7c-b44c-1607b13da5dd"
+        "8f0850d3-13ca-4f7c-b44c-1607b13da5dd",
+        "30ff0bbf-240d-45e4-9726-20d1fb0743d3",
+        "ff2b09c8-b0c5-49aa-8c85-9d92234ce771",
+        "17c1e174-98d1-4d20-a5d4-65556dffed17"
     ],
     "tutorial": ""
 }

@@ -18,9 +18,15 @@ if (player == 1) {
 	key_left = ord("A");
 	key_right = ord("D");
 	key_jump = vk_space;
+	key_basic = ord("R");
+	key_special1 = ord("T");
+	key_special2 = ord("Y");
 } else {
 	character = 1;
 	key_left = vk_left;
 	key_right = vk_right;
 	key_jump = vk_up;
+	key_basic = ord("I");
+	key_special1 = ord("O");
+	key_special2 = ord("P");
 }

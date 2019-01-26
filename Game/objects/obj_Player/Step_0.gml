@@ -1,44 +1,46 @@
 
-input_left = keyboard_check(key_left);
-input_right = keyboard_check(key_right);
-input_jump = keyboard_check_pressed(key_jump);
-input_special1 = keyboard_check(ord("T"));
+var input_left = keyboard_check(key_left);
+var input_right = keyboard_check(key_right);
+var input_jump_pressed = keyboard_check_pressed(key_jump);
+var input_basic_pressed = keyboard_check_pressed(key_basic);
+var input_special2_pressed = keyboard_check_pressed(key_special2);
+
+var input_special1_pressed, input_special1, input_special1_released;
+if (character == 2) {
+	input_special1 = keyboard_check(key_special1);
+	input_special1_released = keyboard_check_released(key_special1);
+} else {
+	input_special1_pressed = keyboard_check_pressed(key_special1);
+}
 
 var move = input_right - input_left;
-horizontal = move * spd;
+var horizontal = move * spd;
 vertical = vertical + grav;
 
 // Horizonal movement
-if (place_meeting(x + horizontal, y, obj_Wall)) {
-	if (!place_meeting(x + sign(horizontal), y, obj_Wall)) {
-		if (character == 2) {
-			if (!input_special1) {
-				x = x + sign(horizontal);
-			}
-		} else {
-			x = x + sign(horizontal);
+if (character != 2 || !input_special1) {
+	if (place_meeting(x + horizontal, y, obj_Wall)) {
+		while (!place_meeting(x + sign(horizontal), y, obj_Wall)) {
+			x += sign(horizontal);
 		}
+	} else {
+		x += horizontal;
 	}
-	horizontal = 0;
-}
-if (character == 2) {
-	if (!input_special1) {
-		x = x + horizontal;
-	}
-} else {
-	x = x + horizontal;
 }
 
 // Vertical movement
+onGround = false;
 if (place_meeting(x, y + vertical, obj_Wall)) {
-	if (!place_meeting(x, y + sign(vertical), obj_Wall)) {
-		y = y + sign(vertical);
+	onGround = true;
+	while (!place_meeting(x, y + sign(vertical), obj_Wall)) {
+		y += sign(vertical);
+		onGround = false;
 	}
 	vertical = 0;
 }
-y = y + vertical;
+y += vertical;
 
-if ((place_meeting(x, y + 1, obj_Wall)) && input_jump) {
+if ((place_meeting(x, y + 1, obj_Wall)) && input_jump_pressed) {
 	vertical = jump;
 }
 
@@ -59,18 +61,19 @@ if (horizontal > 0) {
 }
 
 // Pirate ability
-if (character == 2) {
-	if (input_special1) {
-		global.player = 1;
-		global.facing = facing;
-		if (Attack1 < 0) {
-			Attack1Damage++;
-		}
-	}
-	if (keyboard_check_released((ord("T")))) {
-		instance_create_layer(x + (facing * 45) , y + 5, "instances", obj_AeiserBeard1);
-		Attack1 = 25;
-	}
+if (character == 2 && input_special1 && Attack1 < 0) {
+	Attack1Damage++;
+}
+
+// Attack inputs
+if (input_basic_pressed) {
+	BasicAttack();
+}
+if (character != 2 && input_special1_pressed || character == 2 && input_special1_released) {
+	SpecialOne();
+}
+if (input_special2_pressed) {
+	SpecialTwo();
 }
 
 BasicCooldown--;
