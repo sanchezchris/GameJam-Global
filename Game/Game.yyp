@@ -130,7 +130,7 @@
             "Key": "8a3832eb-53d0-486e-9867-d6f94ad7899d",
             "Value": {
                 "id": "f800617b-b975-449d-bb46-370833551a3a",
-                "resourcePath": "objects\\obj_Player1\\obj_Player1.yy",
+                "resourcePath": "objects\\obj_Player\\obj_Player.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -156,6 +156,14 @@
                 "id": "5ce77ee6-d95f-488d-ba38-8f939f97f5f9",
                 "resourcePath": "options\\linux\\options_linux.yy",
                 "resourceType": "GMLinuxOptions"
+            }
+        },
+        {
+            "Key": "aabcd1b7-9383-4dad-b040-b2a10930ae3a",
+            "Value": {
+                "id": "1bcbe9a6-6b78-44c2-95cf-84e9431aabd8",
+                "resourcePath": "objects\\GameController\\GameController.yy",
+                "resourceType": "GMObject"
             }
         },
         {
