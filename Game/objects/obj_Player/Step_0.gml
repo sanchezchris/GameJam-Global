@@ -44,12 +44,38 @@ if ((place_meeting(x, y + 1, obj_Wall)) && input_jump_pressed) {
 	vertical = jump;
 }
 
+
 // Animation
-if (horizontal != 0) {
-	sprite_index = spr_PlayerRun;
-} else {
-	sprite_index = spr_Player;
+if(character == 1){
+	if (horizontal != 0) {
+		sprite_index = spr_HeinrichRun;
+	}else {
+		sprite_index = spr_Heinrich;
+	}
 }
+else if(character == 2){
+	if (horizontal != 0) {
+		sprite_index = spr_AsierBeardRun;
+	}else {
+		sprite_index = spr_AsierBeard;
+	}
+}
+else if(character == 3){
+	if (horizontal != 0) {
+		sprite_index = spr_DouglasRun;
+	}else {
+		sprite_index = spr_Douglas;
+	}
+}
+else{
+	if (horizontal != 0) {
+		sprite_index = spr_CleetusRun;
+	}else {
+		sprite_index = spr_Cleetus;
+	}
+}
+
+
 
 // Facing direction
 if (horizontal > 0) {

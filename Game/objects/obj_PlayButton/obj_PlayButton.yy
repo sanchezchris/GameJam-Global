@@ -5,16 +5,6 @@
     "name": "obj_PlayButton",
     "eventList": [
         {
-            "id": "2c6e77d8-71eb-4004-a599-d052f437450a",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "0be2536d-ed74-453e-b373-43d0bc1fcb6a"
-        },
-        {
             "id": "7a2f0085-6b30-4700-81fc-c39078daf635",
             "modelName": "GMEvent",
             "mvc": "1.0",

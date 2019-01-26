@@ -14,15 +14,16 @@ facing = 1;
 player = ++global.player;
 
 if (player == 1) {
-	character = 2;
+	character = global.character;
 	key_left = ord("A");
 	key_right = ord("D");
 	key_jump = vk_space;
 	key_basic = ord("R");
 	key_special1 = ord("T");
 	key_special2 = ord("Y");
+	
 } else {
-	character = 1;
+	character = 4;
 	key_left = vk_left;
 	key_right = vk_right;
 	key_jump = vk_up;
