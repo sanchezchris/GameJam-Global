@@ -1,4 +1,6 @@
 if(player != 1){
+	global.player = 1;
+	global.facing = facing;
 if(character == 1){
 	if(Attack2 < 0){
 		instance_create_layer(x, y - 10, "instances", obj_Heinrich2);

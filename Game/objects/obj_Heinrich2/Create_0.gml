@@ -1,6 +1,8 @@
 existence = 20;
 spd = 8;
-facing = obj_Player.facing;
+
+player = global.player;
+facing = global.facing;
 
 if (facing == -1){
 	image_xscale = -1;

@@ -69,29 +69,14 @@ else{
 
 
 // Facing direction
-if(player == 1){
-	if(horizontal > 0){
-		image_xscale = 1;
-		facing1 = 1;
-		}
-	if(horizontal < 0){
-		image_xscale = -1;
-		facing1 = -1;
-	}
+if(horizontal > 0){
+	image_xscale = 1;
+	facing = 1;
 }
-else{
-	if(horizontal > 0){
-		image_xscale = 1;
-		facing2 = 1;
-	}
-	if(horizontal < 0){
-		image_xscale = -1;
-		facing2 = -1;
-	}
+if(horizontal < 0){
+	image_xscale = -1;
+	facing = -1;
 }
-
-
-
 
 
 

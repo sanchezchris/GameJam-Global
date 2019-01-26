@@ -1,7 +1,8 @@
 existance = 15;
 spd = 15;
 grav = 0.5;
-facing = obj_Player.facing;
+player = global.player;
+facing = global.facing;
 vspeed = -10;
 
 
