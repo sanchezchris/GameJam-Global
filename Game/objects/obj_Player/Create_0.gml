@@ -5,6 +5,14 @@ grav = 0.2;
 spd = 6;
 jump = -11.5;
 
+minJumpHeight = 20;
+maxJumpHeight = 100;
+timeToApex = 1;
+
+jumpVelocity = 2 * maxJumpHeight / timeToApex;
+gravityOnJumpHeld = -jumpVelocity / timeToApex;
+gravityOnJumpRelease = jumpVelocity / minJumpHeight / 2 - jumpVelocity * jumpVelocity / minJumpHeight;
+
 BasicCooldown = 0;
 Attack1 = 0;
 Attack2 = 0;
