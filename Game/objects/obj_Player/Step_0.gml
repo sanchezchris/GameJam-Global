@@ -1,10 +1,11 @@
 
-key_left = keyboard_check(ord("A"));
-key_right = keyboard_check(ord("D"));
-key_space = keyboard_check_pressed(vk_space);
-key_T = keyboard_check(ord("T"));
+input_left = keyboard_check(key_left);
+input_right = keyboard_check(key_right);
+input_jump = keyboard_check_pressed(key_jump);
+input_basic = keyboard_check(key_basic);
+input_special1 = keyboard_check(key_special1);
 
-var move = key_right - key_left;
+var move = input_right - input_left;
 horizontal = move * spd;
 vertical = vertical + grav;
 
@@ -14,7 +15,7 @@ if(place_meeting(x + horizontal, y, obj_Wall)){
 	if(!place_meeting(x + sign(horizontal), y, obj_Wall)){
 		
 		if(character == 2){
-			if(!key_T){
+			if(!input_special1){
 			x = x + sign(horizontal);
 			}
 		}
@@ -25,7 +26,7 @@ if(place_meeting(x + horizontal, y, obj_Wall)){
 	horizontal = 0;
 }
 if(character == 2){
-	if(!key_T){
+	if(!input_special1){
 	x = x + horizontal;
 	}
 }
@@ -48,7 +49,7 @@ if(place_meeting(x, y + vertical, obj_Wall)){
 }
 y = y + vertical;
 
-if((place_meeting(x, y+1, obj_Wall)) && key_space){
+if((place_meeting(x, y+1, obj_Wall)) && input_jump){
 	vertical = jump;
 }
 
@@ -82,12 +83,12 @@ if(horizontal < 0){
 
 // ability for pirate
 if(character == 2){
-	if(key_T){
+	if(input_special1){
 		if(Attack1 < 0){
 		Attack1Damage++;
 		}
 	}
-	if(keyboard_check_released(ord("T"))){
+	if(keyboard_check_released(key_special1)){
 		instance_create_layer(x + (facing * 45) , y + 5, "instances", obj_AeiserBeard1);
 		Attack1 = 25;
 	}
@@ -99,11 +100,4 @@ if(character == 2){
 BasicCooldown--;
 Attack1--;
 Attack2--;
-
-
-
-
-
-
-
 
