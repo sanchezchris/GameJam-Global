@@ -3,7 +3,7 @@ horizontal = 0;
 vertical = 0;
 grav = 0.2;
 spd = 6;
-jump = -10;
+jump = -11.5;
 
 character = 1;
 
