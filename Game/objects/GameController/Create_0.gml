@@ -1,0 +1,2 @@
+
+global.player = 0;
