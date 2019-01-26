@@ -11,3 +11,10 @@ if(character == 2){
 		Attack2 = 30;
 	}
 }
+
+if(character == 3){
+	if(Attack2 < 0){
+		instance_create_layer(x, y + 10, "instances", obj_Douglas2);
+		Attack2 = 30;
+	}
+}
