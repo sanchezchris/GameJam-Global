@@ -24,6 +24,7 @@ basicCooldown = 0;
 special1Cooldown = 0;
 special2Cooldown = 0;
 special1Damage = 0;
+airJumps = 0;
 
 player = ++global.player;
 
