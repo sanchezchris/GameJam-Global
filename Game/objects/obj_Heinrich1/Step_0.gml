@@ -5,7 +5,7 @@ x = x + (facing * spd);
 if(player == 1){
 	if(place_meeting(x, y, inst_4F4C548D)){
 		
-		if(inst_4F4C548D.flameDebuff < 5){
+		if(inst_4F4C548D.flameDebuff < 10){
 			inst_4F4C548D.flameDebuff++;
 			inst_4F4C548D.flameDebuffCooldown = 60;
 		}
@@ -17,7 +17,7 @@ if(player == 1){
 else{
 	if(place_meeting(x, y, inst_2FC2D6B8)){
 		
-		if(inst_2FC2D6B8.flameDebuff < 5){
+		if(inst_2FC2D6B8.flameDebuff < 10){
 			inst_2FC2D6B8.flameDebuff++;
 			inst_2FC2D6B8.flameDebuffCooldown = 60;
 		}

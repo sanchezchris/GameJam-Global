@@ -131,7 +131,7 @@ if(flameDebuff > 0){
 	
 	if(flameDebuffCooldown <= 0){
 		flameDebuff--;
-		flameDebuffCooldown = 60;
+		flameDebuffCooldown = 30;
 	}
 }
 
