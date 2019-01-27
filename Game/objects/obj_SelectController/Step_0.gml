@@ -8,7 +8,7 @@ var d1 = input_right1 - input_left1;
 if (d0 != 0 || d1 != 0) {
 	var selection0 = global.character_selections[0] + d0;
 	var selection1 = global.character_selections[1] + d1;
-
+audio_play_sound(sfx_select, 0, false);
 	if (selection0 < 0) { selection0 += 4; }
 	else if (selection0 > 3) { selection0 -= 4; }
 	if (selection1 < 0) { selection1 += 4; }
@@ -21,6 +21,7 @@ if (d0 != 0 || d1 != 0) {
 	global.character_selections[0] = selection0;
 	global.character_selections[1] = selection1;
 }
+
 
 if (keyboard_check_pressed(vk_enter)) {
 	room_goto(room0);
