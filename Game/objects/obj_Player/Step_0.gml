@@ -18,18 +18,22 @@ var move = input_right - input_left;
 var horizontal = move * movementSpeed;
 vertical = vertical + playerGravity;
 
+if (slowDebuff > 0) {
+	horizontal *= 0.3;
+}
+
 // Horizonal movement
 if(sleep == false){
 
-if (character != 2 || !input_special1) {
-	if (place_meeting(x + horizontal, y, obj_Wall)) {
-		while (!place_meeting(x + sign(horizontal), y, obj_Wall)) {
-			x += sign(horizontal);
+	if (character != 2 || !input_special1) {
+		if (place_meeting(x + horizontal, y, obj_Wall)) {
+			while (!place_meeting(x + sign(horizontal), y, obj_Wall)) {
+				x += sign(horizontal);
+			}
+		} else {
+			x += horizontal;
 		}
-	} else {
-		x += horizontal;
 	}
-}
 }
 
 // Vertical movement
@@ -83,7 +87,7 @@ if (horizontal > 0) {
 if(sleep == false){
 
 if (character == 2 && input_special1 && special1Cooldown <= 0) {
-	special1Damage += 0.2;
+	special1Damage += 0.5;
 }
 
 	// Attack inputs
@@ -131,16 +135,8 @@ if(flameDebuff > 0){
 	}
 }
 
-if(slowDebuff >= 1){
-	movementSpeed = 4;
-}
-else{
-	movementSpeed = 12;
-}
-
 if(slowDebuff > 0){
 	slowDebuffCooldown--;
-	
 	if(slowDebuffCooldown <= 0){
 		slowDebuff--;
 		slowDebuffCooldown = 90;
@@ -168,21 +164,12 @@ if(pullTo == true){
 	}
 }
 
-
-
 if(hit){
 	hspeed = hspeed - 6;
 	if(hspeed <=0){
 		hit = false;
 	}
 }
-
-
-
-
-
-
-
 
 basicCooldown--;
 special1Cooldown--;

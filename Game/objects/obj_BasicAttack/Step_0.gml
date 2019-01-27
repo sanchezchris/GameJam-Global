@@ -15,7 +15,7 @@ if(player == 1){
 		
 		if(inst_4F4C548D.slowDebuff < 3){
 			inst_4F4C548D.slowDebuff++;
-			inst_4F4C548D.slowDebuffCooldown = 90;
+			inst_4F4C548D.slowDebuffCooldown = 10;
 		}
 		
 		inst_4F4C548D.hp = inst_4F4C548D.hp + damage;
@@ -44,7 +44,7 @@ else{
 		
 		if(inst_2FC2D6B8.slowDebuff < 3){
 			inst_2FC2D6B8.slowDebuff++;
-			inst_2FC2D6B8.slowDebuffCooldown = 90;
+			inst_2FC2D6B8.slowDebuffCooldown = 10;
 		}
 		
 		inst_2FC2D6B8.hp = inst_2FC2D6B8.hp + damage;
