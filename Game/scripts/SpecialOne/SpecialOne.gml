@@ -31,7 +31,7 @@ if (special1Cooldown <= 0) {
 			
 			_x = x + facing * 20;
 			_y = y - 5;
-			special1Cooldown = 35;
+			special1Cooldown = 15;
 			break;
 	}
 	instance_create_layer(_x, _y, "instances", _object);
