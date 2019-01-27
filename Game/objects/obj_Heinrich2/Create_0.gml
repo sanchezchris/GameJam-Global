@@ -1,6 +1,7 @@
 existence = 20;
 spd = 6;
-damage = 7;
+damage = 10;
+stack = 0;
 distance = 1;
 modifier = 1.5;
 knockUp = 5;
