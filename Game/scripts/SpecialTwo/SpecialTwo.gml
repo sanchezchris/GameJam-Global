@@ -25,7 +25,7 @@ if (special2Cooldown <= 0) {
 		case 4:
 			_object = obj_Cleetus2;
 			_x = x;
-			_y = y - 20;
+			_y = y;
 			break;
 	}
 	special2Cooldown = 100;
