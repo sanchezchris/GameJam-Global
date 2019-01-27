@@ -19,6 +19,8 @@ var horizontal = move * movementSpeed;
 vertical = vertical + playerGravity;
 
 // Horizonal movement
+if(sleep == false){
+
 if (character != 2 || !input_special1) {
 	if (place_meeting(x + horizontal, y, obj_Wall)) {
 		while (!place_meeting(x + sign(horizontal), y, obj_Wall)) {
@@ -65,6 +67,7 @@ if (input_jump_released && vertical < 0) {
 } else if (vertical >= 0) {
 	playerGravity = gravityOnFalling;
 }
+}
 
 // Animation
 if (attackAnimation) {
@@ -85,6 +88,8 @@ if (horizontal > 0) {
 }
 
 // Pirate ability
+if(sleep == false){
+
 if (character == 2 && input_special1 && special1Cooldown <= 0) {
 	special1Damage++;
 }
@@ -101,6 +106,8 @@ else if (character != 2 && input_special1_pressed || character == 2 && input_spe
 else if (input_special2_pressed) {
 	SpecialTwo();
 	attackAnimation = true;
+}
+
 }
 
 
@@ -132,6 +139,29 @@ if(slowDebuff > 0){
 		slowDebuffCooldown = 90;
 	}
 }
+
+if(sleep == true){
+	sleepCooldown--;
+	if(sleepCooldown <= 0){
+		sleep = false;
+	}
+}
+
+if(pullTo == true){
+	PullToCooldown--;
+	if(inst_4F4C548D.x > inst_2FC2D6B8.x){
+		move_towards_point(x, y, -25 *pullDir);
+	}
+	else{
+		move_towards_point(x, y, 25 * pullDir);
+	}
+	
+	if(PullToCooldown <= 0){
+		pullTo = false;
+	}
+}
+
+
 
 
 

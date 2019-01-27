@@ -33,6 +33,12 @@ flameDebuff = 0;
 flameDebuffCooldown = 0;
 slowDebuff = 0;
 slowDebuffCooldown = 0;
+sleep = false;
+sleepCooldown = 0;
+pullTo = false;
+PullToCooldown = 0;
+pullDir = 1;
+
 character = global.character_selections[player - 1] + 1;
 
 if (player == 1) {
