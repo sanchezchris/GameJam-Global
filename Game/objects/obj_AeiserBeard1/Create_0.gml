@@ -1,4 +1,7 @@
 existence = 2;
+damage = 5;
+distance = 1;
+modifier = 1;
 
 player = global.player;
 facing = global.facing;

@@ -1,6 +1,6 @@
 
 {
-    "name": "room_PickChrar",
+    "name": "room_PickChar",
     "id": "96a123ab-a7b0-45f8-ac66-13e2e0602df2",
     "creationCodeFile": "",
     "inheritCode": false,

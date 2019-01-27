@@ -1,6 +1,9 @@
-existence = 30;
-spd = 10;
+existence = 50;
+spd = 15;
 facing = 0;
+damage = 5;
+distance = 1;
+modifier = 1;
 
 player = global.player;
 facing = global.facing;

@@ -2,6 +2,9 @@
 spd = 15;
 grav = 0.5;
 vspeed = -10;
+damage = 5;
+distance = 1;
+modifier = 0.5;
 
 player = global.player;
 facing = global.facing;

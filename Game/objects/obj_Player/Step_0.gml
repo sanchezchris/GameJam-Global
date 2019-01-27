@@ -41,6 +41,7 @@ y += vertical;
 
 onGround = place_meeting(x, y + 1, obj_Wall);
 if (onGround) {
+	hspeed = 0;
 	airJumps = 1;
 	doubleJump = false;
 	if (input_jump_pressed) {
@@ -140,6 +141,16 @@ else if (input_special2_pressed) {
 if (basicCooldown < 0) {
 	attackAnimation = false;
 }
+
+if(flameDebuff > 0){
+	flameDebuffCooldown--;
+	
+	if(flameDebuffCooldown <= 0){
+		flameDebuff--;
+		flameDebuffCooldown = 70;
+	}
+}
+
 
 basicCooldown--;
 special1Cooldown--;

@@ -29,6 +29,8 @@ airJumps = 0;
 player = ++global.player;
 
 hp = 0;
+flameDebuff = 0;
+flameDebuffCooldown = 0;
 
 if (player == 1) {
 	character = global.character;
