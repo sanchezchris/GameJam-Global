@@ -167,6 +167,14 @@
             }
         },
         {
+            "Key": "4a4c180d-77f6-44e1-a0d1-281041f821c1",
+            "Value": {
+                "id": "5e53a805-698a-4b47-9e42-62b708b44131",
+                "resourcePath": "objects\\obj_SelectController\\obj_SelectController.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "4e198b11-f66d-4771-a607-7f8b48f2d95c",
             "Value": {
                 "id": "013c2017-da35-4e94-9de3-776c59d03bd9",
@@ -178,7 +186,7 @@
             "Key": "4e363ec5-1407-4e33-83b7-a62a47a107a9",
             "Value": {
                 "id": "f2fc8b02-785c-43d2-98b5-1a10d1ccc270",
-                "resourcePath": "objects\\obj_AsierBeardPic\\obj_AsierBeardPic.yy",
+                "resourcePath": "objects\\obj_AesierBeardPic\\obj_AesierBeardPic.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -194,7 +202,7 @@
             "Key": "53ec0fe5-c1e5-4b8f-a565-a01a70aab36f",
             "Value": {
                 "id": "4c448d15-13c0-448a-89ad-aedd632f003b",
-                "resourcePath": "sprites\\spr_AsierBeardPic1\\spr_AsierBeardPic1.yy",
+                "resourcePath": "sprites\\spr_AesierBeardPic1\\spr_AesierBeardPic1.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -434,7 +442,7 @@
             "Key": "a0964fce-538f-412d-b15d-09bcfa8a7bae",
             "Value": {
                 "id": "25743285-1e4e-4e62-887b-f9471355e4d1",
-                "resourcePath": "sprites\\spr_AsierBeardRun\\spr_AsierBeardRun.yy",
+                "resourcePath": "sprites\\spr_AesierBeardRun\\spr_AesierBeardRun.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -458,7 +466,7 @@
             "Key": "a961b611-a537-4118-9e37-18d9013bbd9d",
             "Value": {
                 "id": "f39124d5-bb83-4ada-91b7-1f99133b1a3a",
-                "resourcePath": "sprites\\spr_AsierBeardBasic\\spr_AsierBeardBasic.yy",
+                "resourcePath": "sprites\\spr_AesierBeardBasic\\spr_AesierBeardBasic.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -618,7 +626,7 @@
             "Key": "e286f3b6-1fdf-43cc-8dc1-c38ae512b419",
             "Value": {
                 "id": "8032fa79-86f9-4b2e-beb4-94efb3e08518",
-                "resourcePath": "sprites\\spr_AsierBeardPic\\spr_AsierBeardPic.yy",
+                "resourcePath": "sprites\\spr_AesierBeardPic\\spr_AesierBeardPic.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -642,7 +650,7 @@
             "Key": "ecebcc6c-5c9a-43ce-ad22-74798517e290",
             "Value": {
                 "id": "251d22f6-e5e8-448b-9c67-88315e193abe",
-                "resourcePath": "sprites\\spr_AsierBeard\\spr_AsierBeard.yy",
+                "resourcePath": "sprites\\spr_AesierBeard\\spr_AesierBeard.yy",
                 "resourceType": "GMSprite"
             }
         },

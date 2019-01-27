@@ -2,7 +2,7 @@
     "id": "a0964fce-538f-412d-b15d-09bcfa8a7bae",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_AsierBeardRun",
+    "name": "spr_AesierBeardRun",
     "For3D": false,
     "HTile": false,
     "VTile": false,
