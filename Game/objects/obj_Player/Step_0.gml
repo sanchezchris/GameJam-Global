@@ -29,6 +29,7 @@ if (character != 2 || !input_special1) {
 	}
 }
 
+
 // Vertical movement
 if (place_meeting(x, y + vertical, obj_Wall)) {
 	while (!place_meeting(x, y + sign(vertical), obj_Wall)) {

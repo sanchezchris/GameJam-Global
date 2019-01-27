@@ -27,6 +27,8 @@ special1Damage = 0;
 
 player = ++global.player;
 
+hp = 0;
+
 if (player == 1) {
 	character = global.character;
 	ctrl = 1;
