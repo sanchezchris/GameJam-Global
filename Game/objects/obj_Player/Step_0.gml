@@ -124,7 +124,7 @@ if(flameDebuff > 0){
 	}
 }
 
-if(slowDebuff >= 3){
+if(slowDebuff >= 1){
 	movementSpeed = 4;
 }
 else{
