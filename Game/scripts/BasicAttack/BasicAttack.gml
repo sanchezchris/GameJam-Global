@@ -28,3 +28,5 @@ else{
 	basicCooldown = 15;
 	}
 }
+
+audio_play_sound(sfx_punch, 0, false);
