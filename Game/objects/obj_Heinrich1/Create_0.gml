@@ -1,9 +1,9 @@
 existence = 50;
 spd = 15;
 facing = 0;
-damage = 5;
+damage = 3;
 distance = 1;
-modifier = 1;
+modifier = 0.25;
 knockUp = 5;
 yModifier = 0.5;
 
