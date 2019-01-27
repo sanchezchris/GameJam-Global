@@ -4,6 +4,8 @@ facing = 0;
 damage = 5;
 distance = 1;
 modifier = 1;
+knockUp = 5;
+yModifier = 0.5;
 
 player = global.player;
 facing = global.facing;

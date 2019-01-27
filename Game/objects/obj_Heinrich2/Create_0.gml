@@ -3,6 +3,8 @@ spd = 6;
 damage = 10;
 distance = 1;
 modifier = 1.5;
+knockUp = 5;
+yModifier = 0.5;
 
 player = global.player;
 facing = global.facing;

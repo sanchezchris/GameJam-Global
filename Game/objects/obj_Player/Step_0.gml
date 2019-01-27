@@ -113,9 +113,26 @@ if(flameDebuff > 0){
 	
 	if(flameDebuffCooldown <= 0){
 		flameDebuff--;
-		flameDebuffCooldown = 70;
+		flameDebuffCooldown = 65;
 	}
 }
+
+if(slowDebuff >= 3){
+	movementSpeed = 4;
+}
+else{
+	movementSpeed = 12;
+}
+
+if(slowDebuff > 0){
+	slowDebuffCooldown--;
+	
+	if(slowDebuffCooldown <= 0){
+		slowDebuff--;
+		slowDebuffCooldown = 90;
+	}
+}
+
 
 
 basicCooldown--;

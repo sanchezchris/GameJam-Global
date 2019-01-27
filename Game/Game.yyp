@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "102209a4-0259-41ab-b857-4995385eb0a5",
+            "Value": {
+                "id": "2f9712b5-efb8-40e8-b4c5-1a42fc0f54b2",
+                "resourcePath": "rooms\\roomEnd\\roomEnd.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "17c1e174-98d1-4d20-a5d4-65556dffed17",
             "Value": {
                 "id": "f58a0dc7-7739-4e2e-8b2e-20f9aec9ffbe",
@@ -311,6 +319,14 @@
             }
         },
         {
+            "Key": "7154cc8f-bb29-407a-a834-7762f255c052",
+            "Value": {
+                "id": "ab379150-01a1-4377-84b0-63ae4058cfeb",
+                "resourcePath": "objects\\obj_PlayButton2\\obj_PlayButton2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "75caf301-e26a-4aa4-8d6f-9eb5215003e7",
             "Value": {
                 "id": "0f12be00-a7d0-4286-8cc1-23705c465259",
@@ -347,6 +363,14 @@
             "Value": {
                 "id": "9842ad09-43f3-41cb-918a-e5f0af634901",
                 "resourcePath": "objects\\obj_Cleetus2\\obj_Cleetus2.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "84e88a15-7098-4541-ab15-3118523ae89f",
+            "Value": {
+                "id": "d5d9a587-947a-421b-93f0-ea6702aee542",
+                "resourcePath": "objects\\obj_RoomEndController\\obj_RoomEndController.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -503,6 +527,14 @@
             }
         },
         {
+            "Key": "ae5395b6-46fd-4ee9-8c47-cceafde331fc",
+            "Value": {
+                "id": "418755c7-1b28-4310-bc3a-e2560c5d3561",
+                "resourcePath": "objects\\obj_FightController\\obj_FightController.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b08e104f-36a4-4289-b692-e64f272d1510",
             "Value": {
                 "id": "007b7a4d-4d8f-43f5-84e7-f0cf62c98672",
@@ -651,6 +683,14 @@
             "Value": {
                 "id": "251d22f6-e5e8-448b-9c67-88315e193abe",
                 "resourcePath": "sprites\\spr_AesierBeard\\spr_AesierBeard.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ed17a0b8-992b-499c-845c-7556c34a2970",
+            "Value": {
+                "id": "d22ebd48-6296-4137-8b91-05725ddc13e0",
+                "resourcePath": "sprites\\spr_RoomEnd\\spr_RoomEnd.yy",
                 "resourceType": "GMSprite"
             }
         },

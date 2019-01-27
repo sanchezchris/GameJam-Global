@@ -7,6 +7,8 @@ vspeed = -10;
 damage = 17;
 distance = 1;
 modifier = 1.5;
+knockUp = 1;
+yModifier = 0.5;
 
 
 if (facing == -1){

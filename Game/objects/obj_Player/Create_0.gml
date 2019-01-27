@@ -31,6 +31,8 @@ player = ++global.player;
 hp = 0;
 flameDebuff = 0;
 flameDebuffCooldown = 0;
+slowDebuff = 0;
+slowDebuffCooldown = 0;
 character = global.character_selections[player - 1] + 1;
 
 if (player == 1) {
