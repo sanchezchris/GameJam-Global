@@ -19,6 +19,7 @@ if (special1Cooldown <= 0) {
 			_x = x + facing * 45;
 			_y = y + 5;
 			special1Cooldown = 25;
+			special1Attack = 0;
 			break;
 		case 3:
 			_object = obj_Douglas1;

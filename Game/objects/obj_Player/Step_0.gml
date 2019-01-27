@@ -92,7 +92,7 @@ if (horizontal > 0) {
 if(sleep == false){
 
 if (character == 2 && input_special1 && special1Cooldown <= 0) {
-	special1Damage++;
+	special1Damage += 0.2;
 }
 
 // Attack inputs
