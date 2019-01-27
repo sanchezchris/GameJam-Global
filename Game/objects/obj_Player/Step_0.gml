@@ -30,7 +30,7 @@ if (character != 2 || !input_special1) {
 		x += horizontal;
 	}
 }
-
+}
 
 // Vertical movement
 if (place_meeting(x, y + vertical, obj_Wall)) {
@@ -42,31 +42,32 @@ if (place_meeting(x, y + vertical, obj_Wall)) {
 y += vertical;
 
 onGround = place_meeting(x, y + 1, obj_Wall);
-if (onGround) {
-	hspeed = 0;
-	airJumps = 1;
-	doubleJump = false;
-	if (input_jump_pressed) {
+if (!sleep) {
+	if (onGround) {
+		hspeed = 0;
+		airJumps = 1;
+		doubleJump = false;
+		if (input_jump_pressed) {
+			vertical = jumpVelocity;
+			onGround = false;
+			jumpReleased = false;
+			playerGravity = gravityOnJumpHeld;
+		}
+	} else if (airJumps > 0 && input_jump_pressed) {
+		doubleJump = true;
 		vertical = jumpVelocity;
-		onGround = false;
 		jumpReleased = false;
-		playerGravity = gravityOnJumpHeld;
-	}
-} else if (airJumps > 0 && input_jump_pressed) {
-	doubleJump = true;
-	vertical = jumpVelocity;
-	jumpReleased = false;
-	airJumps--;
-	// Heinrich has a larger double-jump.
-	if (character == 1) {
-		playerGravity = gravityOnJumpHeld;
+		airJumps--;
+		// Heinrich has a larger double-jump.
+		if (character == 1) {
+			playerGravity = gravityOnJumpHeld;
+		}
 	}
 }
 if (input_jump_released && vertical < 0) {
 	playerGravity = gravityOnJumpRelease;
 } else if (vertical >= 0) {
 	playerGravity = gravityOnFalling;
-}
 }
 
 // Animation
@@ -124,7 +125,7 @@ if(flameDebuff > 0){
 	}
 }
 
-if(slowDebuff >= 3){
+if(slowDebuff >= 1){
 	movementSpeed = 4;
 }
 else{
