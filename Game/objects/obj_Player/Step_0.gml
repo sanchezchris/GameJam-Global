@@ -67,47 +67,13 @@ if (input_jump_released && vertical < 0) {
 }
 
 // Animation
-if (character == 1) {
-	if(attackAnimation){
-		sprite_index = spr_HeinrichBasic;
-	}
-	else if (horizontal != 0) {
-		sprite_index = spr_HeinrichRun;
-	}else {
-		sprite_index = spr_Heinrich;
-	}
+if (attackAnimation) {
+	sprite_index = global.spriteArray[character + 7];
+} else if (horizontal != 0) {
+	sprite_index = global.spriteArray[character + 3];
+} else {
+	sprite_index = global.spriteArray[character - 1];
 }
-else if(character == 2){
-	if(attackAnimation){
-		sprite_index = spr_AsierBeardBasic;
-	}
-	else if (horizontal != 0) {
-		sprite_index = spr_AsierBeardRun;
-	}else {
-		sprite_index = spr_AsierBeard;
-	}
-}
-else if(character == 3){
-	if(attackAnimation){
-		sprite_index = spr_DouglasBasic;
-	}
-	else if (horizontal != 0) {
-		sprite_index = spr_DouglasRun;
-	}else {
-		sprite_index = spr_Douglas;
-	}
-}
-else{
-	if(attackAnimation){
-		sprite_index = spr_CleetusBasic;
-	}
-	else if (horizontal != 0) {
-		sprite_index = spr_CleetusRun;
-	}else {
-		sprite_index = spr_Cleetus;
-	}
-}
-
 
 // Facing direction
 if (horizontal > 0) {

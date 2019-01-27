@@ -31,9 +31,9 @@ player = ++global.player;
 hp = 0;
 flameDebuff = 0;
 flameDebuffCooldown = 0;
+character = global.character_selections[player - 1] + 1;
 
 if (player == 1) {
-	character = global.character;
 	ctrl = 1;
 	facing = 1;
 	key_left = ord("A");
@@ -43,7 +43,6 @@ if (player == 1) {
 	key_special1 = ord("T");
 	key_special2 = ord("Y");
 } else {
-	character = 4;
 	ctrl = 0;
 	facing = -1;
 	key_left = vk_left;
