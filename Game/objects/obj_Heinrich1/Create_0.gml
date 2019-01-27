@@ -1,7 +1,7 @@
 existence = 50;
 spd = 15;
 facing = 0;
-damage = 3;
+damage = 5;
 distance = 1;
 modifier = 0.25;
 knockUp = 5;
