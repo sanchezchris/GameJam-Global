@@ -25,6 +25,7 @@ else{
 			inst_4F4C548D.y = inst_4F4C548D.y - knockUp;
 			distance = modifier * inst_4F4C548D.hp;
 			inst_4F4C548D.hspeed = distance * facing;
+			inst_4F4C548D.hit = true;
 			vspeed = 0;
 			hspeed = 0;
 			explosion = true;
@@ -46,6 +47,7 @@ else{
 			inst_2FC2D6B8.y = inst_2FC2D6B8.y - 15;
 			distance = modifier * inst_2FC2D6B8.hp;
 			inst_2FC2D6B8.hspeed = distance * facing;
+			inst_2FC2D6B8.hit = true;
 			vspeed = 0;
 			hspeed = 0;
 			explosion = true;

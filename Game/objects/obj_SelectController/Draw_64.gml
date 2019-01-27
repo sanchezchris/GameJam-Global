@@ -1,6 +1,6 @@
 //names
 draw_set_colour(c_blue);
-draw_text_transformed(125, 430, "HeinRich", 2, 2, 0);
+draw_text_transformed(125, 430, "Heinrich", 2, 2, 0);
 draw_text_transformed(490, 430, "AeserBeard", 2, 2, 0);
 draw_text_transformed(885, 430, "Douglas", 2, 2, 0);
 draw_text_transformed(1269, 430, "Cleetus", 2, 2, 0);

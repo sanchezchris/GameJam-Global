@@ -28,6 +28,6 @@ if (special2Cooldown <= 0) {
 			_y = y - 20;
 			break;
 	}
-	special2Cooldown = 35;
+	special2Cooldown = 100;
 	instance_create_layer(_x, _y, "instances", _object);
 }

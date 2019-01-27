@@ -4,7 +4,7 @@ if(player == 1){
 	if(place_meeting(x, y, inst_4F4C548D)){
 		inst_4F4C548D.hp = inst_4F4C548D.hp + damage;
 	}
-	else if(distance_to_object(inst_2FC2D6B8) < 50){
+	else if(distance_to_object(inst_4F4C548D) < 200){
 		
 		inst_4F4C548D.pullDir = 1;
 		inst_4F4C548D.pullTo = true;
@@ -15,7 +15,7 @@ else{
 	if(place_meeting(x, y, inst_2FC2D6B8)){
 		inst_2FC2D6B8.hp = inst_2FC2D6B8.hp + damage;
 	}
-	else if(distance_to_object(inst_4F4C548D) < 50){
+	else if(distance_to_object(inst_2FC2D6B8) < 200){
 		
 		inst_2FC2D6B8.pullDir = -1;
 		inst_2FC2D6B8.pullTo = true;

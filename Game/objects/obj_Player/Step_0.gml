@@ -163,6 +163,18 @@ if(pullTo == true){
 
 
 
+if(hit){
+	hspeed = hspeed - 6;
+	if(hspeed <=0){
+		hit = false;
+	}
+}
+
+
+
+
+
+
 
 
 basicCooldown--;

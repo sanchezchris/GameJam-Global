@@ -30,7 +30,7 @@ if (special1Cooldown <= 0) {
 			_object = obj_Cleetus1;
 			_x = x + facing * 20;
 			_y = y - 5;
-			special1Cooldown = 15;
+			special1Cooldown = 35;
 			break;
 	}
 	instance_create_layer(_x, _y, "instances", _object);

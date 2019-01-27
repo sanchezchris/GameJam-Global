@@ -7,8 +7,8 @@ minJumpHeight = -50;
 maxJumpHeight = -300;
 
 // In frames:
-timeToApex = 20;
-timeToFallAfterApex = 15;
+timeToApex = 30;
+timeToFallAfterApex = 30;
 
 jumpVelocity = 2 * maxJumpHeight / timeToApex;
 gravityOnJumpHeld = -jumpVelocity / timeToApex;
@@ -29,6 +29,7 @@ airJumps = 0;
 player = ++global.player;
 
 hp = 0;
+hit = false;
 flameDebuff = 0;
 flameDebuffCooldown = 0;
 slowDebuff = 0;
