@@ -97,7 +97,6 @@ if (character == 2 && input_special1 && special1Cooldown <= 0) {
 	else if (character != 2 && input_special1_pressed || character == 2 && input_special1_released) {
 		if (character == 4) {
 			BasicAttack();
-			show_debug_message("Cleetus did special1, attackAnimation = " + string(attackAnimation));
 		} else {
 			SpecialOne();
 		}
