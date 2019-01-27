@@ -2,6 +2,7 @@
 global.player = player
 global.facing = facing
 global.character = character;
+attackAnimation = true;
 
 if(character == 1){
 	if (basicCooldown < 0) {
