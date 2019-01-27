@@ -53,6 +53,10 @@ if (onGround) {
 	vertical = jumpVelocity;
 	jumpReleased = false;
 	airJumps--;
+	// Heinrich has a larger double-jump.
+	if (character == 1) {
+		playerGravity = gravityOnJumpHeld;
+	}
 }
 if (input_jump_released && vertical < 0) {
 	playerGravity = gravityOnJumpRelease;
