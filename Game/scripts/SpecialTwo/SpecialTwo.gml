@@ -15,7 +15,7 @@ if (special2Cooldown <= 0) {
 		case 2:
 			_object = obj_AeiserBeard2;
 			_x = x;
-			_y = y - 20;
+			_y = y;
 			break;
 		case 3:
 			_object = obj_Douglas2;

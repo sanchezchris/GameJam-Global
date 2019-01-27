@@ -23,7 +23,7 @@ else if(character == 3){
 }
 else{
 	if (basicCooldown < 0) {
-	instance_create_layer(x + (facing * 60) , y + 5, "instances", obj_BasicAttack);
+	instance_create_layer(x + (facing * 60) , y + 5, "instances", obj_Cleetus1);
 	basicCooldown = 15;
 	}
 }

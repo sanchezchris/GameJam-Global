@@ -16,7 +16,7 @@ if (special1Cooldown <= 0) {
 			break;
 		case 2:
 			_object = obj_AeiserBeard1;
-			_x = x + facing * 45;
+			_x = x + facing * 30;
 			_y = y + 5;
 			special1Cooldown = 25;
 			break;
@@ -27,7 +27,8 @@ if (special1Cooldown <= 0) {
 			special1Cooldown = 15;
 			break;
 		case 4:
-			_object = obj_Cleetus1;
+			_object = obj_BasicAttack;
+			
 			_x = x + facing * 20;
 			_y = y - 5;
 			special1Cooldown = 35;

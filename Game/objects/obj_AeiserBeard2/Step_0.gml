@@ -10,6 +10,7 @@ if(player == 1){
 		inst_4F4C548D.pullTo = true;
 		inst_4F4C548D.PullToCooldown = 4;
 	}
+	
 }
 else{
 	if(place_meeting(x, y, inst_2FC2D6B8)){
