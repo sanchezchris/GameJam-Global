@@ -9,6 +9,7 @@ distance = 1;
 modifier = 1.5;
 knockUp = 1;
 yModifier = 0.5;
+explosion = false;
 
 
 if (facing == -1){
