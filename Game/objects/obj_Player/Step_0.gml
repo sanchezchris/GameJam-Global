@@ -70,15 +70,6 @@ if (input_jump_released && vertical < 0) {
 	playerGravity = gravityOnFalling;
 }
 
-// Animation
-if (attackAnimation) {
-	sprite_index = global.spriteArray[character + 7];
-} else if (horizontal != 0) {
-	sprite_index = global.spriteArray[character + 3];
-} else {
-	sprite_index = global.spriteArray[character - 1];
-}
-
 // Facing direction
 if (horizontal > 0) {
 	image_xscale = 1;
@@ -95,25 +86,40 @@ if (character == 2 && input_special1 && special1Cooldown <= 0) {
 	special1Damage += 0.2;
 }
 
-// Attack inputs
-if (input_basic_pressed) {
-	BasicAttack();
-	attackAnimation = true;
-}
-else if (character != 2 && input_special1_pressed || character == 2 && input_special1_released) {
-	SpecialOne();
-	attackAnimation = true;
-}
-else if (input_special2_pressed) {
-	SpecialTwo();
-	attackAnimation = true;
-}
+	// Attack inputs
+	if (input_basic_pressed) {
+		if (character == 4) {
+			SpecialOne();
+		} else {
+			BasicAttack();
+		}
+	}
+	else if (character != 2 && input_special1_pressed || character == 2 && input_special1_released) {
+		if (character == 4) {
+			BasicAttack();
+		} else {
+			SpecialOne();
+		}
+	}
+	else if (input_special2_pressed) {
+		SpecialTwo();
+	}
 
 }
 
 
 if (basicCooldown < 0) {
 	attackAnimation = false;
+}
+
+
+// Animation
+if (attackAnimation) {
+	sprite_index = global.spriteArray[character + 7];
+} else if (horizontal != 0) {
+	sprite_index = global.spriteArray[character + 3];
+} else {
+	sprite_index = global.spriteArray[character - 1];
 }
 
 if(flameDebuff > 0){
