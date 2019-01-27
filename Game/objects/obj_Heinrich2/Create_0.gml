@@ -1,5 +1,5 @@
 existence = 20;
-spd = 8;
+spd = 6;
 damage = 10;
 distance = 1;
 modifier = 1.5;

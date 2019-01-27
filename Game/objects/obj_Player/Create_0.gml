@@ -38,10 +38,10 @@ if (player == 1) {
 	facing = 1;
 	key_left = ord("A");
 	key_right = ord("D");
-	key_jump = vk_space;
-	key_basic = ord("R");
-	key_special1 = ord("T");
-	key_special2 = ord("Y");
+	key_jump = ord("W");
+	key_basic = ord("C");
+	key_special1 = ord("V");
+	key_special2 = ord("B");
 } else {
 	ctrl = 0;
 	facing = -1;
