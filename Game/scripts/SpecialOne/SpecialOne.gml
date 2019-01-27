@@ -28,7 +28,7 @@ if (special1Cooldown <= 0) {
 			special1Cooldown = 15;
 			break;
 		case 4:
-			_object = obj_BasicAttack;
+			_object = obj_Cleetus1;
 			
 			_x = x + facing * 20;
 			_y = y - 5;
