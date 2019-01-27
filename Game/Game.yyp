@@ -343,14 +343,6 @@
             }
         },
         {
-            "Key": "8490d9c4-32d7-46bf-93b4-d1706fcf60aa",
-            "Value": {
-                "id": "5f6afac0-3ed7-46f5-ba22-44bc78683a07",
-                "resourcePath": "sprites\\spr_DouglasBasic1\\spr_DouglasBasic1.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "8b113f28-e535-48d6-b3d6-20c2c94459ac",
             "Value": {
                 "id": "00228030-cb66-4203-b5c4-b986e02d72fe",
