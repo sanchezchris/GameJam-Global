@@ -111,6 +111,14 @@
             }
         },
         {
+            "Key": "2ec39bed-8ac5-48c2-84c1-7707689a0e18",
+            "Value": {
+                "id": "2e49da51-dbe5-4a0b-b991-eb080e9b72a3",
+                "resourcePath": "sprites\\spr_P2\\spr_P2.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "2f8cadc5-1f0a-42fa-a99f-8106ce30e091",
             "Value": {
                 "id": "e89bd0ec-2957-4543-87ce-0c0ca343b6a2",
@@ -147,6 +155,14 @@
             "Value": {
                 "id": "8df2aae6-0106-40e1-89cb-143914f6989f",
                 "resourcePath": "sprites\\spr_PlayBotton\\spr_PlayBotton.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "38a770e2-45f7-46f8-97b7-7f6f504208d8",
+            "Value": {
+                "id": "0eb9beb8-91b3-4143-b28f-d5da9ef1b03b",
+                "resourcePath": "sprites\\spr_P1\\spr_P1.yy",
                 "resourceType": "GMSprite"
             }
         },

@@ -1,0 +1,1 @@
+draw_sprite(player == 1 ? spr_P1 : spr_P2, -1, x, y - 88)
